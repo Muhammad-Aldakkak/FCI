@@ -1,0 +1,253 @@
+                                                                       Question#1:
+#include <iostream>
+using namespace std;
+int main (){
+	int num,res=1;
+cout<<"enter the number:\t";
+		cin>>num;
+		if(num<0){	
+cout<<"Error\n";
+		}
+		else{
+for(int i=num;i>0;i--){
+	       res*=i;
+  cout<<"the result is:\t"<<res;
+	}
+return 0;
+}
+
+
+                                                                             Question#2:
+#include<iostream>
+using namespace std;
+int main(){
+	int num,x,m1,m2;
+	cout<<"Enter the number of value you want enter:\t";
+	cin>>num;
+	for(int i=1;i<=num;i++){
+		cout<<"Enter the number "<<i<<":\t";
+		cin>>x;
+		if(i==1){
+			m1=x;
+		}
+		else
+		if(i==2)
+		{
+			if (x>m1)
+			{
+				m2=m1;
+				m1=x;
+			}
+			else 
+			m2=x;
+		}
+		else 
+		if(x>m1){
+			m2=m1;
+			m1=x;
+		}
+		else 
+		if ((x>m2) &&(x<m1))
+		{
+			m2=x;
+		}
+	}
+	cout<<"The max two numbers are:\t"<<m1<<"\t"<<m2;
+	return 0;
+}
+
+
+
+                                                                 Question#3(Without shape #3):
+
+#include<iostream>
+using namespace std;
+int main(){
+	int x;
+	cout<<"Enter the number :\t";
+	cin>>x;
+	for(int i=1;i<=x;i++){
+		for(int j=1;j<=i;j++){
+			if(j==1){
+				cout<<"*";
+			}
+			else{
+				cout<<"**";
+			}
+		}
+		cout<<"\n";
+	}
+cout<<endl;
+	 
+	 	for(int i=1;i<=x;i++){
+		for(int j=x;j>=i;j--){
+			if(j>i){
+				cout<<" ";
+			}
+			else if(j==i){
+				for(int n=1;n<=i;n++){
+					if(n==i){
+						cout<<"*";
+					}
+					else{
+						cout<<"**";
+					}
+				}
+			}
+		}
+		cout<<endl;    
+	}
+		for(int i=1;i<x;i++){
+	for(int j=1;j<=x;j++){
+		if(j<=i){
+			cout<<" ";
+		}
+		else{
+			if(j==x){
+					cout<<"*";
+			}
+		else {
+			cout<<"**";
+		}
+		
+			}
+		}
+				cout<<endl;
+	}
+	return 0;
+}
+
+
+
+                                                                             Question#4:
+#include<iostream>
+using namespace std;
+int main(){
+int x,multi=1,odd=0,even=0;
+float sum=0,count=0,ave;
+for(int i;;i++){
+	cin>>x;
+	if(x<0){
+		break;
+	}
+	else{
+		sum+=x;
+		multi*=x;
+		count++;
+		if(x%2==0){
+			even++;
+		}
+		else if(x%2!=0){
+			odd++;
+		}
+	}
+}
+ave=sum/count;
+cout<<"Summation is:\t"<<sum<<endl;
+cout<<"Multiplication is:\t"<<multi<<endl;
+cout<<"Odd Count is:\t"<<odd<<endl;
+cout<<"Even Count is:\t"<<even<<endl;
+cout<<"Average is:\t"<<ave<<endl;	
+	return 0;
+}
+ 
+
+                                                                    Question#6:
+#include<iostream>
+using namespace std;
+		int ref,wash,cook,tv;
+void stock(){
+	cout<<"Enter # of Refrigerators in the stock:\t";
+	cin>>ref;
+	cout<<"Enter # of Washers in the stock:\t";
+	cin>>wash;
+	cout<<"Enter # of Cookers in the stock:\t";
+	cin>>cook;
+	cout<<"Enter # of T.Vs in the stock:\t";
+	cin>>tv;
+}
+void console(){
+	cout<<"1. Add Refrigerators to the stock\n"<<"2. Add Washers to the stock\n"
+	<<"3. Add cookers to the stock\n"<<"4. Add T.Vs to the stock\n"
+	<<"5. Remove Refrigerators to the stock\n"<<"6. Remove Washers to the stock\n"
+	<<"7. Remove cookers to the stock\n"<<"8. Remove T.Vs to the stock\n"
+	<<"9. Display stock\n"<<"10. Exit\n"<<"Enter your choice:\t";
+}
+void add(int x){
+		int temp;
+	if(x==1){
+	cout<<"Enter # of Refrigerators you want add:\t";
+	cin>>temp;
+	ref+=temp;
+	}
+	else if(x==2){
+		cout<<"Enter # of Washers you want add:\t";
+		cin>>temp;
+		wash+=temp;
+	}
+	else if(x==3){
+		cout<<"Enter # of Cookers you want add:\t";
+		cin>>temp;
+		cook+=temp;
+	}
+	else{
+		cout<<"Enter # of T.Vs you want add:\t";
+		cin>>temp;
+		tv+=temp;
+	}
+}
+void remove(int x){
+		int temp;
+	if(x==5){
+	cout<<"Enter # of Refrigerators you want remove:\t";
+	cin>>temp;
+	ref-=temp;
+	}
+	else if(x==6){
+		cout<<"Enter # of Washers you want remove:\t";
+		cin>>temp;
+		wash-=temp;
+	}
+	else if(x==7){
+		cout<<"Enter # of Cookers you want remove:\t";
+		cin>>temp;
+		cook-=temp;
+	}
+	else{
+		cout<<"Enter # of T.Vs you want remove:\t";
+		cin>>temp;
+		tv-=temp;
+	}
+}
+void display(){
+			cout<<"You have "<<ref<<" pieces of Refrigerators.\n"<<"You have "<<wash
+			<<" pieces of Washers.\n"<<"You have "<<cook<<" piece of cookers.\n"
+			<<"You have "<<tv<<" pieces of T.Vs.\n";
+}
+int main(){
+	int n;
+	stock();
+	start:
+console();
+	cin>>n;
+	if(n<=4){
+		add(n);
+		goto start;
+	}
+	else if(n>4 && n<9){
+		remove(n);
+		goto start;
+	}
+	else if(n==9){
+	display();
+	goto start;
+	}
+	else if(n==10){
+		cout<<"Thanks for using my program\n";
+	}
+	else {
+		goto start;	
+	}
+	return 0;
+}
+
