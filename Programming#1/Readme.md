@@ -1,1 +1,1 @@
-#Programming #1 Course using [C++]
+Programming #1 Course using C++
