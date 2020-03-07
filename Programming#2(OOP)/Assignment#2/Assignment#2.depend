@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1451228551 source:c:\users\muhammad\desktop\assignment#2\course.cpp
+	"Course.h"
+
+1451228551 c:\users\muhammad\desktop\assignment#2\course.h
+	<string>
+
+1451235767 source:c:\users\muhammad\desktop\assignment#2\graduatestudent.cpp
+	"GraduateStudent.h"
+
+1451235742 c:\users\muhammad\desktop\assignment#2\graduatestudent.h
+	"Student.h"
+
+1451235742 c:\users\muhammad\desktop\assignment#2\student.h
+	"Course.h"
+
+1451322808 source:c:\users\muhammad\desktop\assignment#2\main.cpp
+	<iostream>
+	"Student.h"
+	"NormalStudent.h"
+	"GraduateStudent.h"
+	"SemesterManagement.h"
+
+1451235775 source:c:\users\muhammad\desktop\assignment#2\normalstudent.cpp
+	"NormalStudent.h"
+
+1451235743 c:\users\muhammad\desktop\assignment#2\normalstudent.h
+	"Student.h"
+
+1451234197 source:c:\users\muhammad\desktop\assignment#2\semestermanagement.cpp
+	"SemesterManagement.h"
+	<iostream>
+
+1451229942 c:\users\muhammad\desktop\assignment#2\semestermanagement.h
+	"Student.h"
+
+1451322561 source:c:\users\muhammad\desktop\assignment#2\student.cpp
+	"Student.h"
+

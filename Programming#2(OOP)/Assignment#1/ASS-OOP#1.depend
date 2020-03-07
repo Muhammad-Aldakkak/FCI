@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1449361732 source:c:\users\muhammad\desktop\ass-oop#1\account.cpp
+	"Account.h"
+	<iostream>
+	<ctype.h>
+
+1449121350 c:\users\muhammad\desktop\ass-oop#1\account.h
+	"Date.h"
+
+1447439094 c:\users\muhammad\desktop\ass-oop#1\date.h
+	<string>
+
+1449121248 source:c:\users\muhammad\desktop\ass-oop#1\customer.cpp
+	"Customer.h"
+	<iostream>
+
+1449360961 c:\users\muhammad\desktop\ass-oop#1\customer.h
+	"Account.h"
+
+1449360961 source:c:\users\muhammad\desktop\ass-oop#1\date.cpp
+	"Date.h"
+	<sstream>
+	<ctime>
+
+1449567487 source:c:\users\muhammad\desktop\ass-oop#1\main.cpp
+	<iostream>
+	<string>
+	<limits>
+	"Date.h"
+	"Account.h"
+	"Customer.h"
+
